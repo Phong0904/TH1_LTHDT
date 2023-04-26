@@ -1,0 +1,33 @@
+
+package TinhDungTichXe;
+
+import java.util.ArrayList;
+
+public class DanhSachXe {
+    private ArrayList<Vehicle> vh = new ArrayList<>();
+    
+    public void them_xe(Vehicle ve){
+        vh.add(ve);
+        System.out.println("Them thanh cong");
+    }
+    
+    public void xuat(){
+        System.out.println(String.format("|%-20s|%-20s|%-20s|%-20s|%-20s", "Ten chu xe", "Loai xe", "Dung tich", "Tri gia", "Thue phai nop"));
+        System.out.println("============================================================================================================");   
+        for (Vehicle v : vh) {
+            System.out.println(String.format("|%-20s|%-20s|%-20s|%-20s|%-20s", v.getTenChuXe(), v.getLoaiXe(), v.getDungTich(), v.getTriGia(),v.getThue()));
+        }
+    }
+    
+    public double tinhRTienThueTruocBa(double GiaTri, double DungTich){
+        double tienThueTruocBa;
+        if(DungTich<100){
+            tienThueTruocBa = GiaTri * 0.01;
+        }else if(DungTich>200){
+            tienThueTruocBa = GiaTri * 0.05;
+        }else{
+            tienThueTruocBa = GiaTri * 0.03;
+        }
+        return tienThueTruocBa;
+    }
+}
