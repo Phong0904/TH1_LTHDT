@@ -1,0 +1,52 @@
+
+package TinhDungTichXe;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        DanhSachXe ds = new DanhSachXe();
+        Scanner sc = new Scanner(System.in);
+        int menu;
+        do{
+            System.out.println("Nhap vao chuc nang");
+            System.out.println("1. Nhap thong tin");
+            System.out.println("2. Xuat thong tin");
+            System.out.println("0. Thoat chuong trinh");
+            System.out.print("Nhap: ");
+            menu = sc.nextInt();
+            switch(menu){
+                case 1:
+                    sc.nextLine();
+                    System.out.print("Nhap ten chu xe: ");
+                    String TenChuXe = sc.nextLine();
+                    
+
+                    System.out.print("Nhap loai xe: ");
+                    String LoaiXe = sc.nextLine();
+                    
+                    System.out.print("Nhap gia tri xe: ");
+                    double TriGia = sc.nextDouble();
+                    
+                    System.out.print("Nhap dung tich xe: ");
+                    double DungTich = sc.nextDouble();
+                    
+                    double Thue = ds.tinhRTienThueTruocBa(TriGia, DungTich);
+                    
+                    Vehicle vh = new Vehicle(TenChuXe, LoaiXe, DungTich, TriGia, Thue);
+                    ds.them_xe(vh);
+                    break;
+                case 2:
+                    ds.xuat();
+                    break;
+
+                default:
+                    if(menu !=0){
+                        System.out.println("Nhap lai chuc nang");
+                    }else{
+                        System.out.println("Thoat chuong trinh thanh cong");
+                    }
+            }
+        }while(menu != 0);
+    }
+}
