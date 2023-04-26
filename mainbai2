@@ -1,0 +1,34 @@
+package Bai2;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        DanhSachSinhVien ds = new DanhSachSinhVien();
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Nhap vao ma lop: ");
+        String maLHP = sc.nextLine();
+        
+        System.out.println("Nhap vao ten lop: ");
+        String tenLHP = sc.nextLine();
+        
+        System.out.println("Nhap vao ten giang vien: ");
+        String tenGV = sc.nextLine();
+        
+        System.out.println("Thong tin lop hoc: ");
+        String thongTinLopHoc = sc.nextLine();
+        
+        List<SinhVien> dsSV = ds.nhapthongtinsv();
+        
+        System.out.println("Ma LHP: " + maLHP);
+        System.out.println("Ten LHP: " + tenLHP);
+        System.out.println("Ten GV: " + tenGV);
+        System.out.println("Thong tin lop hoc: " + thongTinLopHoc);
+        System.out.println("Danh sach sinh vien");
+        ds.in_sv();
+        System.out.println("Tong sinh vien: "+ ds.getSoLuongSV());
+    }
+}
