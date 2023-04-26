@@ -1,0 +1,58 @@
+
+package TinhDungTichXe;
+
+public class Vehicle {
+    private String TenChuXe, LoaiXe;
+    private double TriGia, DungTich, Thue;
+
+    public Vehicle() {
+    }
+
+    public Vehicle(String TenChuXe, String LoaiXe, double DungTich, double TriGia, double Thue) {
+        this.TenChuXe = TenChuXe;
+        this.LoaiXe = LoaiXe;
+        this.DungTich = DungTich;
+        this.TriGia = TriGia;
+        this.Thue = Thue;
+    }
+
+    public String getTenChuXe() {
+        return TenChuXe;
+    }
+
+    public void setTenChuXe(String TenChuXe) {
+        this.TenChuXe = TenChuXe;
+    }
+
+    public String getLoaiXe() {
+        return LoaiXe;
+    }
+
+    public void setLoaiXe(String LoaiXe) {
+        this.LoaiXe = LoaiXe;
+    }
+
+    public double getDungTich() {
+        return DungTich;
+    }
+
+    public void setDungTich(double DungTich) {
+        this.DungTich = DungTich;
+    }
+
+    public double getTriGia() {
+        return TriGia;
+    }
+
+    public void setTriGia(double TriGia) {
+        this.TriGia = TriGia;
+    }
+
+    public double getThue() {
+        return Thue;
+    }
+
+    public void setThue(double Thue) {
+        this.Thue = Thue;
+    }
+}
